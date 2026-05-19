@@ -1,0 +1,38 @@
+# CSC-PA 2D baseline (no temporal prompt) on LITS
+cuda_visible_devices: "0"
+seed: 101
+debug: False
+exp_name: 'CSC_PA'
+comment: 'CSC_PA'
+model_name: 'CSC_PA'
+train_bs: 16
+valid_bs: 16
+debug_train_bs: 10
+debug_valid_bs: 10
+img_size: [192, 192]
+epochs: 30
+lr: 0.00005
+max_grad_norm: 1.0
+scheduler: 'CosineAnnealingLR'
+min_lr: 0.00000001
+T_max: int(30000/train_bs*epochs)+50
+T_0: 40
+warmup_epochs: 0
+wd: 0.000001
+n_accumulate: max(1, 32//train_bs)
+n_fold: 5
+num_classes: 1
+attention: None
+use_multimodal_data: False
+2.5D: False
+num_workers: 4
+wandb_watch: False
+cudnn_benchmark: True
+# CSC-PA architecture (ResNet50-FPN + DeepLabV3+ + prototype correlation)
+cscpa_sync_bn: False
+cscpa_pretrained: False
+cscpa_inner_planes: 256
+cscpa_dilations: [12, 24, 36]
+cscpa_use_pcg: True
+cscpa_multi_grid: True
+cscpa_replace_stride_with_dilation: [False, True, True]

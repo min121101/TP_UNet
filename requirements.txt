@@ -1,0 +1,16 @@
+torch>=2.0
+torchvision>=0.15
+numpy
+pandas
+pyyaml
+tqdm
+albumentations
+opencv-python-headless
+scikit-learn
+segmentation-models-pytorch
+transformers
+wandb
+colorama
+torchinfo
+ftfy
+regex

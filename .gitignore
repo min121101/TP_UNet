@@ -1,0 +1,50 @@
+# Secrets and local env
+.env
+.env.*
+!.env.example
+
+# Experiment outputs
+wandb/
+model_weights_save/
+outputs/
+runs/
+logs/
+*.log
+
+# Data (download / generate locally; see dataset/)
+dataset/*.csv
+!dataset/data_info.example.csv
+data/
+*.npy
+*.nii
+*.nii.gz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+**/.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Checkpoints
+*.pth
+*.pt
+*.bin
+*.ckpt
+
+# Large pretrained caches (download via Hugging Face / scripts)
+model/electra-small-discriminator/pytorch_model.bin
