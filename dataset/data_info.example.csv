@@ -1,4 +1,0 @@
-id,case,seq_num,tagging,image_path,mask_path,image_paths,mask_paths,empty,rle_len
-0,volume-0,0,0.01,./data/2D_img/volume-0/0.png,./data/2D_label/segmentation-0/0.png,,,TRUE,0
-1,volume-0,1,0.03,./data/2D_img/volume-0/1.png,./data/2D_label/segmentation-0/1.png,,,TRUE,0
-2,volume-1,0,0.12,./data/2D_img/volume-1/0.png,./data/2D_label/segmentation-1/0.png,,,FALSE,128
